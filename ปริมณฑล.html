@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Map point with lat/long</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/mapdata/countries/th/th-all.js"></script>
+
+<div id="container"></div>
+
+<script>
+    
+// Prepare demo data
+// Data is joined to map using value of 'hc-key' property by default.
+// See API docs for 'joinBy' for more info on linking data and map.
+var data = [
+    ['th-ct', 0],
+    ['th-4255', 1],
+    ['th-pg', 2],
+    ['th-st', 3],
+    ['th-kr', 4],
+    ['th-sa', 5],
+    ['th-tg', 6],
+    ['th-tt', 7],
+    ['th-pl', 8],
+    ['th-ps', 9],
+    ['th-kp', 10],
+    ['th-pc', 11],
+    ['th-sh', 12],
+    ['th-at', 13],
+    ['th-lb', 14],
+    ['th-pa', 15],
+    ['th-np', 16],
+    ['th-sb', 17],
+    ['th-cn', 18],
+    ['th-bm', 19],
+    ['th-pt', 20],
+    ['th-no', 21],
+    ['th-sp', 22],
+    ['th-ss', 23],
+    ['th-sm', 24],
+    ['th-pe', 25],
+    ['th-cc', 26],
+    ['th-nn', 27],
+    ['th-cb', 28],
+    ['th-br', 29],
+    ['th-kk', 30],
+    ['th-ph', 31],
+    ['th-kl', 32],
+    ['th-sr', 33],
+    ['th-nr', 34],
+    ['th-si', 35],
+    ['th-re', 36],
+    ['th-le', 37],
+    ['th-nk', 38],
+    ['th-ac', 39],
+    ['th-md', 40],
+    ['th-sn', 41],
+    ['th-nw', 42],
+    ['th-pi', 43],
+    ['th-rn', 44],
+    ['th-nt', 45],
+    ['th-sg', 46],
+    ['th-pr', 47],
+    ['th-py', 48],
+    ['th-so', 49],
+    ['th-ud', 50],
+    ['th-kn', 51],
+    ['th-tk', 52],
+    ['th-ut', 53],
+    ['th-ns', 54],
+    ['th-pk', 55],
+    ['th-ur', 56],
+    ['th-sk', 57],
+    ['th-ry', 58],
+    ['th-cy', 59],
+    ['th-su', 60],
+    ['th-nf', 61],
+    ['th-bk', 62],
+    ['th-mh', 63],
+    ['th-pu', 64],
+    ['th-cp', 65],
+    ['th-yl', 66],
+    ['th-cr', 67],
+    ['th-cm', 68],
+    ['th-ln', 69],
+    ['th-na', 70],
+    ['th-lg', 71],
+    ['th-pb', 72],
+    ['th-rt', 73],
+    ['th-ys', 74],
+    ['th-ms', 75],
+    ['th-un', 76],
+    ['th-nb', 77]
+];
+Highcharts.maps["countries/th/th-all"] = {
+    "title": "Thailand",
+    "version": "1.1.2",
+    "type": "FeatureCollection",
+    "copyright": "Copyright (c) 2015 Highsoft AS, Based on data from Natural Earth",
+    "copyrightShort": "Natural Earth",
+    "copyrightUrl": "http://www.naturalearthdata.com",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:EPSG:32647"
+        }
+    },
+    "hc-transform": {
+        "default": {
+            "crs": "+proj=utm +zone=47 +datum=WGS84 +units=m +no_defs",
+            "scale": 0.000427525171275,
+            "jsonres": 15.5,
+            "jsonmarginX": -999,
+            "jsonmarginY": 9851.0,
+            "xoffset": 328899.640185,
+            "yoffset": 2260900.49542
+        }
+    },
+        "features": [{
+            "type": "Feature",
+            "id": "TH.BM",
+            "properties": {
+                "hc-group": "admin1",
+                "hc-middle-x": 0.19,
+                "hc-middle-y": 0.92,
+                "hc-key": "th-bm",
+                "hc-a2": "BM",
+                "labelrank": "7",
+                "hasc": "TH.BM",
+                "alt-name": "Bangkok|Krung Thep|Krung Thep Maha Nakhon|Phra Nakhon-Thonburi",
+                "woe-id": "2347165",
+                "subregion": null,
+                "fips": "TH40",
+                "postal-code": "BM",
+                "name": "Bangkok Metropolis",
+                "country": "Thailand",
+                "type-en": "Province",
+                "region": "Central",
+                "longitude": "100.626",
+                "woe-name": "Bangkok Metropolis",
+                "latitude": "13.793",
+                "woe-label": "Bangkok, TH, Thailand",
+                "type": "Changwat"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [1187, 4759],
+                        [1160, 4754],
+                        [1139, 4755],
+                        [1147, 4770],
+                        [1131, 4843],
+                        [1099, 4876],
+                        [1089, 4930],
+                        [1086, 4945],
+                        [1092, 4980],
+                        [1201, 4980],
+                        [1225, 5017],
+                        [1245, 5090],
+                        [1337, 5069],
+                        [1498, 5094],
+                        [1493, 5018],
+                        [1513, 4997],
+                        [1460, 4913],
+                        [1465, 4904],
+                        [1362, 4918],
+                        [1328, 4875],
+                        [1271, 4885],
+                        [1278, 4907],
+                        [1210, 4884],
+                        [1206, 4835],
+                        [1184, 4823],
+                        [1187, 4759]
+                    ]
+                ]
+            }
+    },{
+        "type": "Feature",
+        "id": "TH.NP",
+        "properties": {
+            "hc-group": "admin1",
+            "hc-middle-x": 0.51,
+            "hc-middle-y": 0.55,
+            "hc-key": "th-np",
+            "hc-a2": "NP",
+            "labelrank": "7",
+            "hasc": "TH.NP",
+            "alt-name": null,
+            "woe-id": "2347177",
+            "subregion": null,
+            "fips": "TH53",
+            "postal-code": "NP",
+            "name": "Nakhon Pathom",
+            "country": "Thailand",
+            "type-en": "Province",
+            "region": "Central",
+            "longitude": "100.072",
+            "woe-name": "Nakhon Pathom",
+            "latitude": "13.917",
+            "woe-label": "Nathon Pathon, TH, Thailand",
+            "type": "Changwat"
+        },
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [1008, 5257],
+                    [1048, 5250],
+                    [1053, 5213],
+                    [1039, 5149],
+                    [1062, 5105],
+                    [1059, 5048],
+                    [1092, 4980],
+                    [1086, 4945],
+                    [1089, 4930],
+                    [1048, 4911],
+                    [1037, 4879],
+                    [908, 4895],
+                    [884, 4903],
+                    [873, 4935],
+                    [827, 4920],
+                    [814, 4940],
+                    [823, 5012],
+                    [809, 5072],
+                    [765, 5086],
+                    [713, 5152],
+                    [715, 5171],
+                    [764, 5174],
+                    [840, 5233],
+                    [959, 5230],
+                    [1008, 5257]
+                ]
+            ]
+        }
+    },{
+        "type": "Feature",
+        "id": "TH.NO",
+        "properties": {
+            "hc-group": "admin1",
+            "hc-middle-x": 0.36,
+            "hc-middle-y": 0.59,
+            "hc-key": "th-no",
+            "hc-a2": "NO",
+            "labelrank": "9",
+            "hasc": "TH.NO",
+            "alt-name": null,
+            "woe-id": "2347163",
+            "subregion": null,
+            "fips": "TH38",
+            "postal-code": "NO",
+            "name": "Nonthaburi",
+            "country": "Thailand",
+            "type-en": "Province",
+            "region": "Central",
+            "longitude": "100.407",
+            "woe-name": "Nonthaburi",
+            "latitude": "13.8933",
+            "woe-label": "Nonthaburi, TH, Thailand",
+            "type": "Changwat"
+        },
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [1101, 5211],
+                    [1094, 5160],
+                    [1108, 5130],
+                    [1213, 5089],
+                    [1245, 5090],
+                    [1225, 5017],
+                    [1201, 4980],
+                    [1092, 4980],
+                    [1059, 5048],
+                    [1062, 5105],
+                    [1039, 5149],
+                    [1053, 5213],
+                    [1064, 5226],
+                    [1101, 5211]
+                ]
+            ]
+        }
+    },{
+        "type": "Feature",
+        "id": "TH.PT",
+        "properties": {
+            "hc-group": "admin1",
+            "hc-middle-x": 0.78,
+            "hc-middle-y": 0.53,
+            "hc-key": "th-pt",
+            "hc-a2": "PT",
+            "labelrank": "9",
+            "hasc": "TH.PT",
+            "alt-name": null,
+            "woe-id": "2347164",
+            "subregion": null,
+            "fips": "TH39",
+            "postal-code": "PT",
+            "name": "Pathum Thani",
+            "country": "Thailand",
+            "type-en": "Province",
+            "region": "Central",
+            "longitude": "100.625",
+            "woe-name": "Pathum Thani",
+            "latitude": "14.034",
+            "woe-label": "Pathum Thani, TH, Thailand",
+            "type": "Changwat"
+        },
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [1245, 5090],
+                    [1213, 5089],
+                    [1108, 5130],
+                    [1094, 5160],
+                    [1101, 5211],
+                    [1247, 5212],
+                    [1293, 5224],
+                    [1319, 5250],
+                    [1438, 5307],
+                    [1469, 5321],
+                    [1502, 5287],
+                    [1505, 5146],
+                    [1499, 5098],
+                    [1498, 5094],
+                    [1337, 5069],
+                    [1245, 5090]
+                ]
+            ]
+        }
+    },{
+        "type": "Feature",
+        "id": "TH.SP",
+        "properties": {
+            "hc-group": "admin1",
+            "hc-middle-x": 0.50,
+            "hc-middle-y": 0.49,
+            "hc-key": "th-sp",
+            "hc-a2": "SP",
+            "labelrank": "9",
+            "hasc": "TH.SP",
+            "alt-name": "Pak Nam|Samudh Prakarn|Samudraprakar|Samut Phrakhan",
+            "woe-id": "2347167",
+            "subregion": null,
+            "fips": "TH42",
+            "postal-code": "SP",
+            "name": "Samut Prakan",
+            "country": "Thailand",
+            "type-en": "Province",
+            "region": "Central",
+            "longitude": "100.704",
+            "woe-name": "Samut Prakan",
+            "latitude": "13.606",
+            "woe-label": "Samut Prakan, TH, Thailand",
+            "type": "Changwat"
+        },
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [1455, 4748],
+                    [1340, 4770],
+                    [1276, 4802],
+                    [1251, 4770],
+                    [1187, 4759],
+                    [1184, 4823],
+                    [1206, 4835],
+                    [1210, 4884],
+                    [1278, 4907],
+                    [1271, 4885],
+                    [1328, 4875],
+                    [1362, 4918],
+                    [1465, 4904],
+                    [1526, 4880],
+                    [1530, 4859],
+                    [1480, 4802],
+                    [1455, 4748]
+                ]
+            ]
+        }
+    },{
+        "type": "Feature",
+        "id": "TH.SS",
+        "properties": {
+            "hc-group": "admin1",
+            "hc-middle-x": 0.83,
+            "hc-middle-y": 0.40,
+            "hc-key": "th-ss",
+            "hc-a2": "SS",
+            "labelrank": "9",
+            "hasc": "TH.SS",
+            "alt-name": "Krokkrak Maha Chai|Mahachai|Samudrasagara",
+            "woe-id": "2347179",
+            "subregion": null,
+            "fips": "TH55",
+            "postal-code": "SS",
+            "name": "Samut Sakhon",
+            "country": "Thailand",
+            "type-en": "Province",
+            "region": "Central",
+            "longitude": "100.225",
+            "woe-name": "Samut Sakhon",
+            "latitude": "13.5655",
+            "woe-label": "Samut Sakhon, TH, Thailand",
+            "type": "Changwat"
+        },
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [1139, 4755],
+                    [1094, 4748],
+                    [1049, 4773],
+                    [1022, 4744],
+                    [916, 4706],
+                    [907, 4727],
+                    [879, 4763],
+                    [891, 4840],
+                    [908, 4895],
+                    [1037, 4879],
+                    [1048, 4911],
+                    [1089, 4930],
+                    [1099, 4876],
+                    [1131, 4843],
+                    [1147, 4770],
+                    [1139, 4755]
+                ]
+            ]
+        }
+    }]
+}
+// Create the chart
+Highcharts.mapChart('container', {
+    chart: {
+        map: 'countries/th/th-all'
+    },
+
+    title: {
+        text: 'Highmaps basic demo'
+    },
+
+    subtitle: {
+        text: 'Source map: <a href="http://code.highcharts.com/mapdata/countries/th/th-all.js">Thailand</a>'
+    },
+
+    mapNavigation: {
+        enabled: true,
+        buttonOptions: {
+            verticalAlign: 'bottom'
+        }
+    },
+
+    colorAxis: {
+        min: 0
+    },
+
+    series: [{
+        data: data,
+        name: 'Random data',
+        states: {
+            hover: {
+                color: '#BADA55'
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            format: '{point.name}'
+        }
+    },{
+        // Use the gb-all map with no data as a basemap
+        name: 'Basemap',
+        borderColor: '#707070',
+        nullColor: 'rgba(200, 200, 200, 0.3)',
+        showInLegend: false
+    }]
+});
+
+	</script>
